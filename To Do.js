@@ -63,7 +63,7 @@ let filteredToDo = (word) => {
 
 
 //Adding keyup to get each text that was typed
-search.addEventListener("keyup", () => {
+search.addEventListener("input", () => {
     const word = search.value.trim().toLowerCase();
     filteredToDo(word);
 })
