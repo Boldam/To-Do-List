@@ -1,0 +1,19 @@
+body{
+    background-color: aquamarine;
+}
+
+.delete{
+    color: red;
+    cursor: pointer;
+}
+
+.plus{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-style: italic;
+
+}
+
+.disappear{
+    display: none !important;
+}
