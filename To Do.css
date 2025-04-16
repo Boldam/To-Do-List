@@ -6,6 +6,12 @@ body{
     color: red;
     cursor: pointer;
 }
+.list{
+    cursor: pointer;
+}
+.line{
+    text-decoration: line-through;
+}
 
 .plus{
     font-family: 'Times New Roman', Times, serif;
