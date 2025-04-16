@@ -9,7 +9,7 @@ addForm.addEventListener("submit", (e) => {
     const toDo = addForm.add.value.trim();
     //if (!toDo) return;
     let html =`<div class="list-group-item d-flex justify-content-between align-items-center border-4 ">
-                    <h5 class="mb-0">${toDo}</h5>
+                    <h5 class="mb-0 task">${toDo}</h5>
                     <h5 class="mb-0 px-3 delete">X</h5>
                 </div>`
 
@@ -23,11 +23,14 @@ addForm.addEventListener("submit", (e) => {
     
 })
 
+//striking through a completed task
 // deleting to do - using event delegation
 list.addEventListener("click", (e) => {
     if(e.target.classList.contains("delete")){
         e.target.parentElement.remove();
-    }  
+    }else if(e.target.classList.contains("task")){
+        e.target.classList.toggle("line")
+    }
 })
 
 // my first attempt that didn't work
@@ -37,6 +40,8 @@ list.addEventListener("click", (e) => {
 //     })
 // })
 
+
+//searching Todo- Getting the particular form that accept the search data
 let filteredToDo = (word) => {
     Array.from(list.children)
     .filter((todo) => {
@@ -53,13 +58,7 @@ let filteredToDo = (word) => {
     .forEach((todo) => {
         todo.classList.remove("disappear");
     })
-
-
-
-
 } 
-
-//searching Todo- Getting the particular form that accept the search data
 
 
 //Adding keyup to get each text that was typed
